@@ -1,6 +1,7 @@
 import {
   BarChart2,
   BarChart3,
+  BookDashed,
   DollarSign,
   Home,
   Menu,
@@ -30,6 +31,18 @@ const SIDEBAR_ITEMS = [
     color: "#6366f1",
     href: "/premium",
   },
+  {
+    name: "Dashboard",
+    icon: BookDashed,
+    color: "#6366f1",
+    href: "/dashboard",
+  },
+  {
+    name: "Dashboard 1",
+    icon: BookDashed,
+    color: "#6366f1",
+    href: "/dashboard1",
+  },
 ];
 
 const Sidebar = () => {
@@ -48,7 +61,7 @@ const Sidebar = () => {
       }`}
       animate={{ width: isSidebarOpen ? 256 : 80 }}
     >
-      <div className="flex h-full flex-col border-r-2 border-gray-300  bg-opacity-30 p-4 backdrop-blur-md">
+      <div className="flex h-full flex-col border-r-2 border-gray-300 bg-opacity-30 p-4 backdrop-blur-md">
         <div className="flex items-center gap-x-5">
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -59,7 +72,7 @@ const Sidebar = () => {
             <Menu size={24} />
           </motion.button>
           {isSidebarOpen ? (
-            <span className="font-semibold transition-all ease-in delay-300">
+            <span className="font-semibold transition-all delay-300 ease-in">
               Dashboard
             </span>
           ) : (
